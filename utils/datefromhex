@@ -1,0 +1,23 @@
+#!/bin/bash
+source ../admin.cfg
+. ../functions
+
+field1=`echo $1 | gawk '{ print $1 }'`
+field2=`echo $1 | gawk '{ print $2 }'`
+yearhex="$field1$field2"
+
+field3=`echo $1 | gawk '{ print $3 }'`
+field4=`echo $1 | gawk '{ print $4 }'`
+field5=`echo $1 | gawk '{ print $5 }'`
+field6=`echo $1 | gawk '{ print $6 }'`
+field7=`echo $1 | gawk '{ print $7 }'`
+field8=`echo $1 | gawk '{ print $8 }'`
+
+
+field9=`echo $1 | gawk '{ print $9 }'`
+
+field10=`echo $1 | gawk '{ print $10 }'`
+field11=`echo $1 | gawk '{ print $11 }'`
+
+
+echo "$((0x$yearhex))-$((0x$field3))-$((0x$field4)),$((0x$field5)):$((0x$field6)):$((0x$field7)).$((0x$field8)),-$((0x$field10)):$((0x$field11))"
