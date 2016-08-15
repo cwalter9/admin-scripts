@@ -1,3 +1,6 @@
 [submodule "ciscocmd"]
 	path = ciscocmd
 	url = git@github.com:mariograz/ciscocmd.git
+[submodule "telegram-bot-bash"]
+	path = telegram-bot-bash
+	url = git@github.com:cwalter9/telegram-bot-bash.git
